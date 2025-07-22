@@ -25,13 +25,13 @@ smb1390: qcom,smb1390@10 {
 	qcom,periph-map = <0x10>;
 	status = "disabled";
 
-	smb1390_revid: qcom,revid {
+	smb1390_revid: qcom,revid@100 {
 		compatible = "qcom,qpnp-revid";
 		reg = <0x100>;
 	};
 
 	smb1390_charger: qcom,charge_pump {
-		compatible = "qcom,smb1390-charger";
+		compatible = "qcom,smb1390-charger-psy";
 		qcom,pmic-revid = <&smb1390_revid>;
 		interrupt-parent = <&smb1390>;
 		status = "disabled";
