@@ -9,7 +9,11 @@
 	#cooling-cells = <2>;
 };
 
+#ifndef CONFIG_ARM_QCOM_CPUFREQ_HW
 &clock_cpucc {
+#else
+&cpufreq_hw {
+#endif
 	#address-cells = <1>;
 	#size-cells = <1>;
 	lmh_dcvs0: qcom,limits-dcvs@18358800 {
