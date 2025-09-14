@@ -31,7 +31,6 @@
 		clock-max-rate = <0 0 0 0 460000000 19200000 460000000
 					460000000>;
 
-		sde-vdd-supply = <&mdss_core_gdsc>;
 		mmcx-supply = <&VDD_MMCX_LEVEL>;
 
 		/* interrupt config */
