@@ -14,7 +14,7 @@
 		qcom,bus-slv-id = <MSM_BUS_SLAVE_EBI_CH0>;
 		iommus = <&apps_smmu 0xc3 0x0>;
 		qcom,iommu-dma-addr-pool = <0x40000000 0xc0000000>;
-		qcom,iommu-dma = "fastmap";
+		qcom,iommu-dma = "bypass";
 	};
 
 	/* I2C */
@@ -376,7 +376,7 @@
 		qcom,bus-slv-id = <MSM_BUS_SLAVE_EBI_CH0>;
 		iommus = <&apps_smmu 0x603 0x0>;
 		qcom,iommu-dma-addr-pool = <0x40000000 0xc0000000>;
-		qcom,iommu-dma = "fastmap";
+		qcom,iommu-dma = "bypass";
 	};
 
 	/* GNSS UART Instance for CDP/MTP platform */
@@ -701,7 +701,7 @@
 		qcom,bus-slv-id = <MSM_BUS_SLAVE_EBI_CH0>;
 		iommus = <&apps_smmu 0x7a3 0x0>;
 		qcom,iommu-dma-addr-pool = <0x40000000 0xc0000000>;
-		qcom,iommu-dma = "fastmap";
+		qcom,iommu-dma = "bypass";
 	};
 
 	/* I2C */
@@ -964,14 +964,13 @@
 		reg = <0x26c0000 0x6000>;
 		qcom,bus-mas-id = <MSM_BUS_MASTER_SENSORS_AHB>;
 		qcom,bus-slv-id = <MSM_BUS_SLAVE_EBI_CH0>;
-		qcom,iommu-s1-bypass;
 		qcom,subsys-name = "slpi";
 		clock-names = "corex", "core2x";
 		clocks = <&clock_scc SCC_QUPV3_CORE_CLK>,
 			<&clock_scc SCC_QUPV3_2XCORE_CLK>;
 		iommus = <&apps_smmu 0x4e3 0x0>;
 		qcom,iommu-dma-addr-pool = <0x40000000 0xc0000000>;
-		qcom,iommu-dma = "fastmap";
+		qcom,iommu-dma = "bypass";
 		status = "disabled";
 	};
 
