@@ -2867,6 +2867,7 @@
 		reg-names = "msgram", "irq-reg-base";
 		qcom,irq-mask = <0x1>;
 		interrupts = <GIC_SPI 389 IRQ_TYPE_EDGE_RISING>;
+		mboxes = <&apcs_glb 0>;
 
 		label = "aop";
 		qcom,early-boot;
