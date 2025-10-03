@@ -2868,6 +2868,7 @@
 		qcom,irq-mask = <0x1>;
 		interrupts = <GIC_SPI 389 IRQ_TYPE_EDGE_RISING>;
 		mboxes = <&apcs_glb 0>;
+		mbox-names = "aop_qmp";
 
 		label = "aop";
 		qcom,early-boot;
@@ -2882,6 +2883,8 @@
 		reg-names = "msgram", "irq-reg-base";
 		qcom,irq-mask = <0x12>;
 		interrupts = <GIC_SPI 369 IRQ_TYPE_EDGE_RISING>;
+		mboxes = <&sp_scsr 0>;
+		mbox-names = "low_npu_qmp";
 
 		label = "npu_qmp_low";
 		priority = <0>;
@@ -2895,6 +2898,8 @@
 		reg-names = "msgram", "irq-reg-base";
 		qcom,irq-mask = <0x14>;
 		interrupts = <GIC_SPI 370 IRQ_TYPE_EDGE_RISING>;
+		mboxes = <&sp_scsr 0>;
+		mbox-names = "high_npu_qmp";
 
 		label = "npu_qmp_high";
 		priority = <1>;
@@ -3614,7 +3619,6 @@
 		compatible = "qcom,ipa-smmu-uc-cb";
 		iommus = <&apps_smmu 0x522 0x0>;
 		qcom,iommu-dma-addr-pool = <0x40400000 0x1FC00000>;
-		qcom,iommu-dma = "fastmap";
 	};
 
 	qcom,ipa_fws {
