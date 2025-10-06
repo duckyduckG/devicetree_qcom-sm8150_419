@@ -3616,7 +3616,6 @@
 		compatible = "qcom,ipa-smmu-uc-cb";
 		iommus = <&apps_smmu 0x522 0x0>;
 		qcom,iommu-dma-addr-pool = <0x40400000 0x1FC00000>;
-		qcom,iommu-dma = "fastmap";
 	};
 
 	qcom,ipa_fws {
